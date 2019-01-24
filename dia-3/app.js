@@ -87,7 +87,7 @@
 //     let resto = x % y;
 //     // alert("Resto " + resto + " X " + x + " y " + y);
 //     if (resto == 0 && x != y && y != 1) {
-//       console.log("No es primo " + x + " Su resto: " + resto);
+//      // console.log("No es primo " + x + " Su resto: " + resto);
 //       break;
 //     } else {
 //       // console.log("Resto " + resto + " X " + x + " y " + y);
@@ -181,23 +181,23 @@
 
 // alert(min(-2, -3));
 
-function pow(a, b) {
-  let resultado = a;
-  let x = 1;
-  do {
-    resultado = resultado * a;
-    ++x;
-  } while (x < b);
-  return resultado;
-}
+// function pow(a, b) {
+//   let resultado = a;
+//   let x = 1;
+//   do {
+//     resultado = resultado * a;
+//     ++x;
+//   } while (x < b);
+//   return resultado;
+// }
 
-function esentero(a) {
-  return a % 1 == 0 ? true : false;
-}
-let a, b;
-do {
-  a = prompt("Introduce el primer dígito entero mayoer de 1", 0);
-  b = prompt("Introduce el segundo dígito entero mayor de 1", 0);
+// function isInteger(a) {
+//   return a % 1 == 0 ? true : false;
+// }
+// let a, b;
+// do {
+//   a = prompt("Introduce el primer dígito entero mayoer de 1", 0);
+//   b = prompt("Introduce el segundo dígito entero mayor de 1", 0);
 
-  if (esentero(a) && esentero(b) && a > 1 && b > 1) alert(pow(a, b));
-} while (!esentero(a) || !esentero(b) || a < 1 || b < 1);
+//   if (isInteger(a) && isInteger(b) && a > 1 && b > 1) alert(pow(a, b));
+// } while (!isInteger(a) || !isInteger(b) || a < 1 || b < 1);
