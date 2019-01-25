@@ -32,7 +32,7 @@
 //     alert("El número " + numero + " en romano es: " + getRomanNumber(numero));
 //   else
 //     alert(
-//       "El número de ser menor de 1.000 y mayor de 0. Sólo llevo 4 días con javascript..."
+//       "El número debe ser menor de 1.000 y mayor de 0. Sólo llevo 4 días con javascript..."
 //     );
 // } while (!parar);
 
@@ -40,39 +40,39 @@
 
 // SCript para saber la letra del DNI
 
-let dni = 32818535;
+// let dni = 32818535;
 
-let resto = dni % 23;
+// let resto = dni % 23;
 
-function getletter(resto) {
-  let arrayLetters = [
-    "t",
-    "r",
-    "w",
-    "a",
-    "g",
-    "m",
-    "y",
-    "f",
-    "p",
-    "d",
-    "x",
-    "b",
-    "n",
-    "j",
-    "z",
-    "s",
-    "q",
-    "v",
-    "h",
-    "l",
-    "c",
-    "k",
-    "e"
-  ];
-  return arrayLetters[resto];
-}
+// function getletter(resto) {
+//   let arrayLetters = [
+//     "t",
+//     "r",
+//     "w",
+//     "a",
+//     "g",
+//     "m",
+//     "y",
+//     "f",
+//     "p",
+//     "d",
+//     "x",
+//     "b",
+//     "n",
+//     "j",
+//     "z",
+//     "s",
+//     "q",
+//     "v",
+//     "h",
+//     "l",
+//     "c",
+//     "k",
+//     "e"
+//   ];
+//   return arrayLetters[resto];
+// }
 
-console.log("Valor " + getletter(resto));
+// console.log("Valor " + getletter(resto));
 
-// cintonic
+// Fintonic

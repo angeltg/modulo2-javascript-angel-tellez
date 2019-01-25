@@ -30,44 +30,44 @@
 
 // User & Pasword
 
-let userName;
-let userPassword;
-let parametro;
-let validado = false;
+// let userName;
+// let userPassword;
+// let parametro;
+// let validado = false;
 
-do {
-  userName = prompt("Ingrese su nombre de usuario", "");
+// do {
+//   userName = prompt("Ingrese su nombre de usuario", "");
 
-  function getPassword() {
-    userPassword = prompt("Ingrese su password", "");
-    return userPassword;
-  }
+//   function getPassword() {
+//     userPassword = prompt("Ingrese su password", "");
+//     return userPassword;
+//   }
 
-  function evaluePassword() {
-    return userPassword == "TheMaster";
-  }
+//   function evaluePassword() {
+//     return userPassword == "TheMaster";
+//   }
 
-  function showCancel(parametro) {
-    return parametro == "" || parametro == null;
-  }
+//   function showCancel(parametro) {
+//     return parametro == "" || parametro == null;
+//   }
 
-  if (userName == "Admin") {
-    let result = evaluePassword(getPassword());
-    if (result) {
-      alert("Welcome!");
-      validado = true;
-    } else {
-      if (showCancel(userPassword)) {
-        alert("Has cancelado el proceso");
-        validado = true;
-      } else {
-        alert("Sus datos no son correctos. Vuelva a intentarlo.");
-      }
-    }
-  } else {
-    if (showCancel(userName)) {
-      alert("Has cancelado el proceso");
-      validado = true;
-    } else alert("No te conozco, vuelve a intentarlo.");
-  }
-} while (!validado);
+//   if (userName == "Admin") {
+//     let result = evaluePassword(getPassword());
+//     if (result) {
+//       alert("Welcome!");
+//       validado = true;
+//     } else {
+//       if (showCancel(userPassword)) {
+//         alert("Has cancelado el proceso");
+//         validado = true;
+//       } else {
+//         alert("Sus datos no son correctos. Vuelva a intentarlo.");
+//       }
+//     }
+//   } else {
+//     if (showCancel(userName)) {
+//       alert("Has cancelado el proceso");
+//       validado = true;
+//     } else alert("No te conozco, vuelve a intentarlo.");
+//   }
+// } while (!validado);
