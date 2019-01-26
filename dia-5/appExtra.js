@@ -9,6 +9,17 @@ user.name = "Pepe";
 user.calle = "Nicaragua";
 user.pais = "España";
 
+
+let changeFirstLetterName = obj =>{
+      let letra;
+      let words;
+      words = obj.name.split();
+      for(i=0, i< words.length(),i++ ){
+        letra= obj.name.charAt(0).toUpperCase();
+      }
+      
+}
+
 let changeFirstLetter = obj => {
   // function changeFirstLetter(obj) {
 
