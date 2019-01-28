@@ -1,66 +1,57 @@
-/*
- * Aquí podéis hacer los ejercicios y
- * practicar Javascript!
- */
-console.log("Probando, probando, 1, 2, 3!");
-console.log("que pasa");
-console.log("asdad");
+// // // Muestra los errores.
 
-// [1, 2].forEach(alert);
+// // try {
+// //     //scoup todo lo que va entre corchetes.
+// // } catch (error) {
+// //     alert (error.name);
+// //     alert(error.messaje);
+// //     alert(error.stack);
+// // }
 
-//Comentario
-// Cometario
+// // Json es para intercambiar información de una manera organizada.
 
-/** use strict modo esticto ya no sw usa */
+// // let json = '{"name:"John", "aga":30}';
+// // Para usarlo let user = JSON.parse(json);
 
-// declaración de variable
+// // let error = new Error(messaje);
+// // let error = new TypeError (messaje);
 
-let nombredelavariable;
+// // Hacer que se cree un error para que salte el catch;
+// // throw new SyntaxError ("Incomplete data:no name");
 
-nombredelavariable = "Hola Javascript";
+// // try {
 
-let nombredos = "en una sola linea";
+// // } catch (error) {
 
-let minombre = "Ángel";
-let miapellido = "Téllez";
+// // } finally {
+// //     // esto se lanza simpre, haya error o no.
+// // }
 
-// alert("Este es mi nombre " + minombre + " y mi apellido " + miapellido);
+// // Math.floor
+// // Math.ceil
+// // Math.round = toFixed (2) Redondea al decimal mas cercano. Y toFixed nos devuelve los decimales que le indicamos. Devuelve un string.
+// // parseFloat devuelve un número dentro de una cadena con decimales hasta que encuentre un caracter que no es un número.
+// // parseInt duveleve un número entero dentro de una cadena hasta que encuentra algo que no es un número.
 
-console.log("mi nombre ", minombre);
+// // Sum numbers from the visitor
+// let stop = false;
 
-console.log(`mi ${miapellido}`);
+// do {
+//   let numero = +prompt("Primer número para sumar");
+//   let numero2 = +prompt("Segundo número para sumar");
 
-// const cumple; //declaracion de constante No se pueden cambiar. El Código dará un error
+//   if (numero == "" || numero2 == "" || numero == null || numero2 == null) {
+//     console.log("Ha salido del programa");
+//     stop = true;
+//   } else {
+//     if (!isNaN(numero) && !isNaN(numero2)) {
+//       console.log(
+//         "La suma de " + numero + " + " + numero2 + " = " + (numero + numero2)
+//       );
+//     } else {
+//       console.log("Debe introducir 2 números");
+//     }
+//   }
+// } while (!stop);
 
-// hoinsting es la confusion entre variables declaradas dentro y fuera de las funciones
-
-let Nombre;
-let nombre;
-// Son varables distintas. Key sensitive;
-
-const COLOR_ORANGE = "#232232";
-
-mybirdday = "aasd";
-
-// hardcode es un valor que tú has codeado, que has escrito.
-
-// Uno
-let admin;
-let name;
-
-name = "John";
-admin = name;
-alert(admin);
-
-// Dos
-let ourPlanetName = "tierra";
-let currentUserName = "John";
-
-// Tres. Constantes con mayúsculas y minúsculas
-const BIRTHDAY = "18.04.1982";
-
-const AGE = someCode(BIRTHDAY);
-
-const birthday = "18.04.1982";
-
-const age = someCode(birthday);
+// console.log(Math.round((6.35).toFixed(1)));
