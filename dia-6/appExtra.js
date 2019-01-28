@@ -103,6 +103,9 @@
 // Para sumar 1 año a una persona pedimos por prompt que nos diga un monbre
 // Si ese nombre existe le decimos la edad que tiene y preguntamos si quiere sumarle un año. Si quiere se lo sumamos y si no le preguntamos por otro nombre.
 
+let numPersons = 0;
+let personVar;
+
 class Person {
   constructor(name, age) {
     this.name = name;
@@ -114,10 +117,17 @@ class Person {
   set_anho() {
     this.age++;
   }
+  findPerson(operator) {
+    if (this.name == operator) {
+      return this;
+    }
+    return false;
+  }
+  static set_Person(personName, personAge) {
+    return new Person(personName, personAge);
+  }
 }
 
-let numPersons = 0;
-let personVar;
 function createPerson(indentificator) {
   personVar = "person" + indentificator;
   let personName;
@@ -126,6 +136,7 @@ function createPerson(indentificator) {
   personAge = prompt("Introduzca la edad de la persona");
 
   if (personName != "" && personAge > 0) {
+    // eval(personVar + " = Person.set_Person(personName, personAge)");
     eval(personVar + " = new Person (personName,personAge)");
     return true;
   } else {
@@ -143,12 +154,12 @@ for (let i = 0; cargarDatos; i++) {
 
 let operator;
 let correctparameter = false;
-function searchPerson(operator) {
+
+function searchPerson(operador) {
   for (let i = 0; i <= numPersons; i++) {
     let personVar = "person" + i;
-    if (eval(personVar).name == operator) {
-      return eval(personVar);
-    }
+    let obj = eval(personVar).findPerson(operador);
+    if (obj) return obj;
   }
   return false;
 }
