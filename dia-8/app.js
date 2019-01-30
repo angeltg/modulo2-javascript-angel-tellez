@@ -83,72 +83,72 @@
 
 ////////////////////////////////////////////////////////////////
 
-// let continuevar = true;
-// let numerosasumar = [];
+let continuevar = true;
+let numerosasumar = [];
 
-// function showCancel(parametro) {
-//   return (
-//     parametro == "" ||
-//     parametro == undefined ||
-//     parametro == null ||
-//     isNaN(parametro)
-//   );
-// }
+function showCancel(parametro) {
+  return (
+    parametro == "" ||
+    parametro == undefined ||
+    parametro == null ||
+    isNaN(parametro)
+  );
+}
 
-// do {
-//   let valor = prompt("Ingresa el número a incluir en el array");
+do {
+  let valor = prompt("Ingresa el número a incluir en el array");
 
-//   if (showCancel(valor)) {
-//     alert("Has cancelado el proceso");
-//     continuevar = false;
-//   } else {
-//     numerosasumar.push(+valor);
-//   }
-// } while (continuevar);
+  if (showCancel(valor)) {
+    alert("Has cancelado el proceso");
+    continuevar = false;
+  } else {
+    numerosasumar.push(+valor);
+  }
+} while (continuevar);
 
-// let sumatotal = 0;
-// function sumadelarray() {
-//   for (let iterator of numerosasumar) {
-//     sumatotal += +iterator;
-//   }
-//   return sumatotal;
-// }
+let sumatotal = 0;
+function sumadelarray() {
+  for (let iterator of numerosasumar) {
+    sumatotal += +iterator;
+  }
+  return sumatotal;
+}
 // console.log(numerosasumar);
 
-// console.log("La suma de los elementos del array es: " + sumadelarray());
+console.log("La suma de los elementos del array es: " + sumadelarray());
 // console.log(isNaN(0));
 
 ////////////////////////////////////////////////////////////
 
-function getMaxSubSum(arr) {
-  let plus = 0;
+// function getMaxSubSum(arr) {
+//   let plus = 0;
 
-  let total = 0;
-  let arrplus = [];
-  for (let iterator of arr) {
-    plus += iterator;
-    arrplus.push(plus);
-    // console.log(typeof iterator);
-    if (plus > 0 && plus > iterator) {
-      total = plus;
-    } else {
-      plus = iterator;
-      if (iterator > total) {
-        total = iterator;
-      }
-    }
+//   let total = 0;
+//   let arrplus = [];
+//   for (let iterator of arr) {
+//     plus += iterator;
+//     arrplus.push(plus);
+//     // console.log(typeof iterator);
+//     if (plus > 0 && plus > iterator) {
+//       total = plus;
+//     } else {
+//       plus = iterator;
+//       if (iterator > total) {
+//         total = iterator;
+//       }
+//     }
+//     // console.log("plus " + plus + " before " + before + " total " + total);
+//     if (total < Math.max(...arrplus)) {
+//       total = Math.max(...arrplus);
+//     }
+//   }
+//   return total;
+// }
 
-    if (total < Math.max(...arrplus)) {
-      total = Math.max(...arrplus);
-    }
-  }
-  return total;
-}
-
-console.log(getMaxSubSum([-1, 2, 3, -9]));
-console.log(getMaxSubSum([2, -1, 2, 3, -9]));
-console.log(getMaxSubSum([-1, 2, 3, -9, 11]));
-console.log(getMaxSubSum([-2, -1, 1, 2]));
-console.log(getMaxSubSum([100, -9, 1, -3, 5]));
-console.log(getMaxSubSum([1, 2, 3]));
-console.log(getMaxSubSum([-1, -2, -3]));
+// console.log(getMaxSubSum([-1, 2, 3, -9]));
+// console.log(getMaxSubSum([2, -1, 2, 3, -9]));
+// console.log(getMaxSubSum([-1, 2, 3, -9, 11]));
+// console.log(getMaxSubSum([-2, -1, 1, 2]));
+// console.log(getMaxSubSum([100, -9, 1, -3, 5]));
+// console.log(getMaxSubSum([1, 2, 3]));
+// console.log(getMaxSubSum([-1, -2, -3]));
