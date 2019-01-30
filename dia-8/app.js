@@ -120,36 +120,35 @@
 
 ////////////////////////////////////////////////////////////
 
-// function getMaxSubSum(arr) {
-//   let plus = 0;
-//   let before = 0;
-//   let total = 0;
-//   let arrplus = [];
-//   for (let iterator of arr) {
-//     plus += iterator;
-//     arrplus.push(plus);
-//     if (plus > 0 && plus > iterator) {
-//       before = plus;
-//     } else {
-//       plus = iterator;
-//       if (iterator > before) {
-//         before = iterator;
-//       }
-//     }
-//     total = before;
-//     if (total < Math.max.apply(Math, arrplus)) {
-//       total = Math.max.apply(Math, arrplus);
-//     }
+function getMaxSubSum(arr) {
+  let plus = 0;
 
-//     // console.log("plus " + plus + " before " + before + " total " + total);
-//   }
-//   return total;
-// }
+  let total = 0;
+  let arrplus = [];
+  for (let iterator of arr) {
+    plus += iterator;
+    arrplus.push(plus);
+    // console.log(typeof iterator);
+    if (plus > 0 && plus > iterator) {
+      total = plus;
+    } else {
+      plus = iterator;
+      if (iterator > total) {
+        total = iterator;
+      }
+    }
 
-// console.log(getMaxSubSum([-1, 2, 3, -9]));
-// console.log(getMaxSubSum([2, -1, 2, 3, -9]));
-// console.log(getMaxSubSum([-1, 2, 3, -9, 11]));
-// console.log(getMaxSubSum([-2, -1, 1, 2]));
-// console.log(getMaxSubSum([100, -9, 1, -3, 5]));
-// console.log(getMaxSubSum([1, 2, 3]));
-// console.log(getMaxSubSum([-1, -2, -3]));
+    if (total < Math.max(...arrplus)) {
+      total = Math.max(...arrplus);
+    }
+  }
+  return total;
+}
+
+console.log(getMaxSubSum([-1, 2, 3, -9]));
+console.log(getMaxSubSum([2, -1, 2, 3, -9]));
+console.log(getMaxSubSum([-1, 2, 3, -9, 11]));
+console.log(getMaxSubSum([-2, -1, 1, 2]));
+console.log(getMaxSubSum([100, -9, 1, -3, 5]));
+console.log(getMaxSubSum([1, 2, 3]));
+console.log(getMaxSubSum([-1, -2, -3]));

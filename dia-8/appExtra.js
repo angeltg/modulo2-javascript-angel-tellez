@@ -99,7 +99,7 @@
 // );
 
 // Detectar si la frase el palíndromo
-// "No subas, abusón"
+
 let str;
 
 function deletesign(letter) {
