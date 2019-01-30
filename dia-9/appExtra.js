@@ -25,12 +25,21 @@ class Person {
     return person1.casadocon.toUpperCase() == person2.name.toUpperCase();
   }
   totalinfo() {
+    let i = 0;
+    // muestra todas el número de propiedades, functions y herencias
+    console.log(Object.getPrototypeOf(this));
+    // muetra las propiedades y el número
+    console.log(Object.getOwnPropertyNames(this));
+
+    //mostramos el valor de cada propiedad
     for (const key in this) {
+      i++;
       console.log(key + " = " + this[key]);
       if (typeof this[key] == "string") {
-        console.log(this[key].length);
+        console.log("Longitud del string " + this[key].length);
       }
     }
+    // console.log("Número de propiedades:" + i);
   }
 }
 
