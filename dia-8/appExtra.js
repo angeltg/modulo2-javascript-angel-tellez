@@ -41,44 +41,59 @@
 //   A: $_sdfvdsf,23.2fsdcds
 //   B: fvfdv-vs,25.88fdsdf
 
-// let change = [
-//   ["HOUNDRED", 100],
-//   ["FIFTY", 50],
-//   ["TWENTY", 20],
-//   ["TEN", 10],
-//   ["FIVE", 5],
-//   ["TWO", 2],
-//   ["ONE", 1],
-//   ["HALFDOLLAR", 0.5],
-//   ["QUARTER", 0.25],
-//   ["DIME", 0.1],
-//   ["NICKLE", 0.05],
-//   ["PENNY", 0.01]
-// ];
+let change = [
+  ["HOUNDRED", 100],
+  ["FIFTY", 50],
+  ["TWENTY", 20],
+  ["TEN", 10],
+  ["FIVE", 5],
+  ["TWO", 2],
+  ["ONE", 1],
+  ["HALFDOLLAR", 0.5],
+  ["QUARTER", 0.25],
+  ["DIME", 0.1],
+  ["NICKLE", 0.05],
+  ["PENNY", 0.01]
+];
 
-// let backstrin = "";
+let arrchange = [];
+let division = 0;
+function getMoneda(moneyback) {
+  let rounded = 0;
+  for (let i = 0; i < change.length; i++) {
+    division = moneyback / change[i][1];
+    rounded = Math.floor(division);
+    if (rounded > 0) {
+      arrchange.push(rounded + " " + change[i][0]);
+      moneyback = moneyback - rounded * change[i][1];
+    }
+  }
 
-// function getMoneda() {
-//   for (let i = 0; i < change.length; i++) {
-//     if (change[i][1] >= moneyback) {
-//       // Tengo que seguir aquí
-//       backstrin = change[i][0];
-//     }
-//   }
-// }
+  return arrchange;
+}
 
-// function cashRegister(a, b) {
-//   // Tengo que ir restando a la devolución hasta que sea 0
+function cashRegister(a, b) {
+  // Tengo que ir restando a la devolución hasta que sea 0
 
-//   let moneyback = b - a;
-//   do {
-//     getMoneda();
-//   } while (moneyback > 0);
+  // diviendo entre las monedas. 45.23 80.15
 
-//   return backstrin;
-// }
+  let moneyback = (b - a).toFixed(2);
 
-// let price = +prompt("El producto vale", 0);
-// let cash = +prompt("Te doy:", 0);
+  arrchange = getMoneda(moneyback);
 
-// console.log(cashRegister(price, cash));
+  return arrchange;
+}
+
+let price = +prompt("El producto vale", 0);
+let cash = +prompt("Te doy:", 0);
+
+console.log(
+  "Cuesta " +
+    price +
+    " me diste " +
+    cash +
+    " te doy " +
+    (cash - price).toFixed(2) +
+    " en monedas " +
+    cashRegister(price, cash)
+);
