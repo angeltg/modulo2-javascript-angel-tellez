@@ -8,17 +8,28 @@
  */
 
 class Person {
-  constructor(name, apellido, casadocon) {
+  constructor(name, apellido, casadocon, direc) {
     this.name = name;
     this.apellido = apellido;
     this.casadocon = casadocon;
+    this.direc = direc;
   }
   static marriedWith(person1, person2) {
     return person1.casadocon.toUpperCase() == person2.name.toUpperCase();
   }
 }
 
-let person1 = new Person("Pepe", "López", "JUana");
+let direccion = {
+  calle: "Nicaragua",
+  coord: {
+    lat: 4243,
+    long: 43534
+  },
+  cp: 15000,
+  municipio: "A coruña"
+};
+
+let person1 = new Person("Pepe", "López", "JUana", direccion);
 // let person2 = new Person("Juana", "Rodriguez", "Pepe");
 
 // console.log(Person.marriedWith(person1, person2));
@@ -38,20 +49,22 @@ function totalinfo(obj) {
   // muetra las propiedades y el número
   // console.log(Object.getOwnPropertyNames(obj));
 
-  // si es string mostramos su longitud
-  if (typeof obj == "string") {
-    console.log("Longitud del string " + obj.length);
-  } else {
-    //mostramos el valor de cada propiedad
+  //mostramos el valor de cada propiedad
 
-    for (const key in obj) {
-      i++;
-      console.log(key + " = " + obj[key]);
+  for (const key in obj) {
+    i++;
+    console.log(i);
+    // si es string mostramos su longitud
+    console.log(typeof obj[key]);
+    if (typeof obj[key] != "object") {
+      console.log(
+        key + " = " + obj[key] + " y su longitud es " + obj[key].length
+      );
+    } else {
       totalinfo(key);
     }
     console.log("Número de propiedades:" + i);
   }
 }
 
-let str = "sdasda asdasdadsa";
 totalinfo(person1);
