@@ -162,6 +162,65 @@
 
 // console.log(names);
 
+// Creat an extendable calculator
+
+// class Calculator {
+//   constructor() {
+//     this.operation = [];
+//   }
+//   calculate(params) {
+//     params;
+//     let operators = params.split(" ");
+//     let signoDeLaOp = operators[1];
+
+//     let solution = this.operation[signoDeLaOp](operators[0], operators[2]);
+
+//     console.log("Solution seria ->  ", solution);
+
+//     return eval(params);
+//   }
+//   addMethod(name, func) {
+//     this.operation[name] = func;
+//   }
+// }
+// let calc = new Calculator();
+// // console.log(calc.calculate("1 - 2"));
+// console.log(calc.addMethod("*", (a, b) => a * b));
+// console.log(calc.addMethod("/", (a, b) => a / b));
+// console.log(calc.addMethod("**", (a, b) => a ** b));
+// // console.log(calc);
+// calc.calculate("2 * 3");
+// calc.calculate("2 / 3");
+// calc.calculate("2 ** 3");
+
+// calculator con maps
+
+class Calculator {
+  constructor() {
+    this.operator = new Map();
+  }
+  calculate(params) {
+    let operators = params.split(" ");
+    let signoDeLaOp = operators[1];
+
+    let solution = this.operator[signoDeLaOp]((operators[0], operators[2]));
+    return solution;
+  }
+
+  addMethod(name, func) {
+    //   Añadimos las funciones al método
+    // this.operator[name] = func;
+    this.operator.set(name, func);
+
+    console.log(this.operator[name]);
+  }
+}
+
+let calc = new Calculator();
+
+console.log(calc.addMethod("*", (a, b) => a * b));
+calc.calculate("2 * 3");
+
 // Map to objects
 
 // let john = { name: "John", surname: "Smith", id: 1 };
@@ -211,29 +270,29 @@
 
 // Shuffle an array
 
-let arr = [1, 2, 3];
+// let arr = [1, 2, 3];
 
-function shufflet(arr) {
-  let arr3 = [];
-  let arr2 = arr.map(function(item, index) {
-    // console.log(item);
-    return item;
-  });
+// function shufflet(arr) {
+//   let arr3 = [];
+//   let arr2 = arr.map(function(item, index) {
+//     // console.log(item);
+//     return item;
+//   });
 
-  let itemsplice;
-  let hasta;
+//   let itemsplice;
+//   let hasta;
 
-  do {
-    let position = Math.floor(Math.random() * arr2.length + 1) - 1;
-    itemsplice = arr2.splice(position, 1);
+//   do {
+//     let position = Math.floor(Math.random() * arr2.length + 1) - 1;
+//     itemsplice = arr2.splice(position, 1);
 
-    arr3.push(itemsplice);
-    hasta = arr2.length + 2;
-  } while (arr3.length < hasta);
+//     arr3.push(itemsplice);
+//     hasta = arr2.length + 2;
+//   } while (arr3.length < hasta);
 
-  return arr3;
-}
+//   return arr3;
+// }
 
-console.log(shufflet(arr));
-console.log(shufflet(arr));
-console.log(shufflet(arr));
+// console.log(shufflet(arr));
+// console.log(shufflet(arr));
+// console.log(shufflet(arr));
