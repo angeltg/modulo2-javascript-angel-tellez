@@ -1,2 +1,2 @@
 # modulo2-javascript-angel-tellez
-El modulo de jasvascritp
+Día a día del módulo del bootcamp en Javascript de Hack a Bos
